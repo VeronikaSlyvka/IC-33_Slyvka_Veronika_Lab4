@@ -82,17 +82,6 @@ map :hover{
     object-fit: contain; 
 }
 
-@media (max-width: 1024px) {
-    .baner {
-        margin-top: 130px; 
-    }
-}
-
-@media (max-width: 768px) {
-    .baner {
-        margin-top: 180px; 
-    }
-}
 
  #adress, #contacts, #questions{
     font-size: 20px;
@@ -157,19 +146,6 @@ gap: 15px;
     gap: 10px;
     align-items: flex-start;
     flex-wrap: wrap; 
-}
-
-@media (min-width: 769px) {
-    .table_contacts_question {
-        flex-wrap: nowrap; /* На великих екранах елементи залишаються в одному рядку */
-    }
-}
-
-@media (max-width: 768px) {
-    .table_contacts_question {
-        flex-direction: column; /* На малих екранах змінюємо напрямок на вертикальний */
-        align-items: center; /* Центрує елементи в контейнері */
-    }
 }
 
 .table{
@@ -259,3 +235,78 @@ input[type="submit"]:hover {
 footer{
     text-align: center;
 }
+
+
+/* Десктопна версія */
+@media (min-width: 1025px) {
+    .baner {
+        max-width: 100%;
+        max-height: 400px;
+    }
+    .table_contacts_question {
+        flex-wrap: nowrap; 
+    }
+}
+
+/* Планшетна версія */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-container ul {
+        font-size: 16px;
+    }
+
+    .baner {
+        max-height: 350px; 
+        margin-top: 130px; 
+    }
+    .item {
+        width: 20%; 
+    }
+    .table-container table {
+        font-size: 16px;
+    }
+    .table_contacts_question {
+        flex-wrap: nowrap; 
+    }
+}
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+    .menu-container ul {
+        flex-direction: row; 
+        font-size: 15px;
+    }
+
+    .menu-container li a{
+        padding-left: 10px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .baner {
+        margin-top: 120px;
+        max-height: 200px; 
+    }
+
+    #book{
+        font-size: 18px; 
+    }
+
+    .table_contacts_question {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .item {
+        width: 40%; 
+    }
+
+    .table-container table {
+        font-size: 14px;
+    }
+
+    input[type='text'] {
+        width: 50%; 
+    }
+
+}
+

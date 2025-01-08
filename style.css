@@ -83,12 +83,37 @@ map :hover{
 }
 
 
- #adress, #contacts, #questions{
+ #adress, #contacts{
     font-size: 20px;
     text-align: center;
     color:  #0a3737; 
     font-weight: bold;
 } 
+
+#questions{
+    font-size: 20px;
+    text-align: center;
+    color:   #fd5f89; 
+    font-weight: bold;
+} 
+
+.orders{
+border-radius: 35px; 
+border: 5px solid #f9c3d1;
+padding: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.ordersimg{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contactsimg{
+    display: flex;
+    justify-content: space-around;
+}
 
 #book{
     display: block;
@@ -143,6 +168,7 @@ gap: 15px;
 .table_contacts_question{
     display: flex;
     justify-content: space-between; 
+    align-items: center;
     gap: 10px;
     align-items: flex-start;
     flex-wrap: wrap; 
